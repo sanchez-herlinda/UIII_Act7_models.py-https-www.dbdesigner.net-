@@ -1,5 +1,6 @@
 # UIII_Act7_models.py-https-www.dbdesigner.net-
 
+<img width="1352" height="627" alt="image" src="https://github.com/user-attachments/assets/c85aa8de-46ae-4211-b4e6-cd117f228586" />
 
 
 **Sistema de Gestión de Tienda de Mascotas**
