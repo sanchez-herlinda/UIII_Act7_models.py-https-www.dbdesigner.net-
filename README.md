@@ -2,15 +2,12 @@
 
 <img width="1352" height="627" alt="image" src="https://github.com/user-attachments/assets/c85aa8de-46ae-4211-b4e6-cd117f228586" />
 
-
-
 from django.db import models
-
-
 # ------------------------
 #  CATEGORÍA MASCOTA
 # ------------------------
 class CategoriaMascota(models.Model):
+    
     id_categoria = models.AutoField(primary_key=True)
     nombre_categoria = models.CharField(max_length=100)
     descripcion_categoria = models.TextField(blank=True, null=True)
@@ -52,6 +49,7 @@ class AnimalTienda(models.Model):
 #  PRODUCTO PARA MASCOTA
 # ------------------------
 class ProductoMascota(models.Model):
+
     id_producto = models.AutoField(primary_key=True)
     nombre_producto = models.CharField(max_length=255)
     descripcion = models.TextField()
@@ -80,6 +78,7 @@ class ProductoMascota(models.Model):
 #  CLIENTE
 # ------------------------
 class ClienteMascota(models.Model):
+
     id_cliente = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
@@ -98,6 +97,7 @@ class ClienteMascota(models.Model):
 #  EMPLEADO
 # ------------------------
 class EmpleadoTiendaMascota(models.Model):
+
     id_empleado = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
@@ -153,6 +153,7 @@ class VentaTiendaMascota(models.Model):
 #  DETALLE DE VENTA
 # ------------------------
 class DetalleVentaTiendaMascota(models.Model):
+
     id_detalle = models.AutoField(primary_key=True)
 
     id_venta = models.ForeignKey(
@@ -181,11 +182,6 @@ class DetalleVentaTiendaMascota(models.Model):
 
     def __str__(self):
         return f"Detalle {self.id_detalle} de Venta {self.id_venta.id_venta}"
-
-
-
-
-
 
 **Sistema de Gestión de Tienda de Mascotas**
 
